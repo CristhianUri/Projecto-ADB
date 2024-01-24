@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -21,7 +22,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
     </script>
-    <title>CANACINTRA TEHUACÁN </title>
+    <title>Bachillerato Digital No. 43</title>
 </head>
 
 <body>
@@ -66,41 +67,44 @@
             </div>
         </nav>
     </div>
-   
-            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <div class="carousel-item active" data-bs-interval="10000">
-                        <img height="800px" width="1800px" src="/img/1.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item" data-bs-interval="2000">
-                        <img height="800px" src="/img/2.jpg" class="d-block w-100" alt="...">
-                    </div>
-                    <div class="carousel-item">
-                        <img height="800px" src="/img/3.jpg" class="d-block w-100" alt="...">
-                    </div>
+
+    <div class="container mt-1">
+
+        <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active" data-bs-interval="1000">
+                    <img height="500px" width="1800px" src="../img/1.jpg" class="d-block w-100" alt="...">
                 </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
+                <div class="carousel-item" data-bs-interval="2000">
+                    <img height="500px" src="../img/2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img height="500px" src="../img/3.jpg" class="d-block w-100" alt="...">
+                </div>
             </div>
- 
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
 
 
-    <div class="container mt-4" id="#org">
+
+    <div class="container mt-2" id="#org">
         <div class="row justify-content-center">
             <div class="text-center">
                 <h3>SOBRE NOSOTROS</h3>
             </div>
             <div class="col-sm-4  my-2 ">
                 <div class="card">
-                    <img class="img-thumbnail"
+                    <img class="img-thumbnail" style="height :200px"
                         src="https://2.bp.blogspot.com/-df2MxLmx1Bs/T_ETvZo2iWI/AAAAAAAAACA/WKwnXOaogRA/s1600/BD.jpg"
                         class="card-img-top" alt="...">
                     <h5 class="text-center mt-2 text-dark ">
@@ -116,8 +120,8 @@
                 </div>
             </div>
             <div class="col-sm-4 my-2">
-                <div class="card ">
-                    <img class="img-thumbnail"
+                <div class="card shadow-sm ">
+                    <img class="img-thumbnail" style="height :200px"
                         src="https://2.bp.blogspot.com/-df2MxLmx1Bs/T_ETvZo2iWI/AAAAAAAAACA/WKwnXOaogRA/s1600/BD.jpg"
                         alt="...">
                     <h5 class="text-center text-center mt-2 text-dark">
@@ -135,7 +139,7 @@
             </div>
             <div class="col-sm-4 my-2">
                 <div class="card">
-                    <img class="img-thumbnail"
+                    <img class="img-thumbnail" style="height :200px"
                         src="https://2.bp.blogspot.com/-df2MxLmx1Bs/T_ETvZo2iWI/AAAAAAAAACA/WKwnXOaogRA/s1600/BD.jpg"
                         class="card-img-top" alt="...">
                     <h5 class="text-center mt-2 text-dark ">
@@ -151,7 +155,7 @@
                 </div>
             </div>
         </div>
-
+    </div>
 
 </body>
 
