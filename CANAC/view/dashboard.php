@@ -27,7 +27,7 @@
     <title>Dashboard - SB Admin</title>
     <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
     <link href="../css/estilo.css" rel="stylesheet" />
-        <!-- CSS only -->
+    <!-- CSS only -->
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 </head>
@@ -106,21 +106,22 @@
             <main>
                 <div class="container-fluid px-4">
                     <div class="card mb-4 mt-2">
-                        <div class="card-header">
+                        <div class="card-header ">
                             <h6><i class="fas fa-table me-1"></i>Tabla de Preguntas y respuestas por agregar
                             </h6>
-                            <h6 class="text-danger"><Strong>
-
-                                    Nota:</Strong class="text-danger"> Si elimina una pregunta que fue agregada al chat
-                                se eliminara de la memoria del chat
-                            </h6>
-                            <?php
-        //    if (isset($_REQUEST["mensaje"]) && $_REQUEST["mensaje"] == 'true') {
-          //      echo "<div><p><strong>Lo siento pero ya no puedes editar esta pregunta ya que se encuentra grabada en el chat.
-            //    Solo puedes eliminar la pregunta pero si lo haces el chat olvidara la informacion</strong></p> </div>";
-            //}
-            ?>
-
+                            <div class="d-flex justify-content-between align-items-center">
+                            </div>
+                            <form action="files.php" method="post" enctype="multipart/form-data" id="formFiles" >
+                               
+                                <div class="col-md-6  ">
+                                    <div class="col-md-6">
+                                        <input class="form-control" type="file" name="alumnoFile">
+                                        <button type="button" onclick="subirArchivo()" class=" btn btn-primary form-control ">Cargar
+                                            Archivo</button>
+                                    </div>
+                                    
+                                </div>
+                            </form>
                         </div>
                         <div class="card-body">
                             <div class="container-fluid col-md-12 ">
@@ -140,9 +141,9 @@
                                         </tr>
                                     </thead>
                                     <tbody id="mitabla">
-<div>
-    <h1>Hola</h1>
-</div>
+                                        <div>
+                                            <h1>Hola</h1>
+                                        </div>
 
                                     </tbody>
                                     <tfoot>
@@ -180,7 +181,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
         crossorigin="anonymous"></script>
-    <script src="../js/datatables-simple-demo.js"></script>
+<!-- <script src="../js/datatables-simple-demo.js"></script> -->
     <!-- <script>
     function tiemporeal() {
         var tabla = $.ajax({
@@ -193,6 +194,48 @@
     }
     setInterval(tiemporeal, 1000);
     </script> -->
+   <!--  <script type="text/javascript">
+        function ()
+        {
+            var form = new FormData($('#formFiles')[0]);
+            $.ajax({
+                url: "../controllers/importar.php",
+                type: "post",
+                data: form,
+                processData: false,
+                contentType: false,
+                success: function(data){
+                    alert('Archivo registrado');
+                }
+            })
+        }
+    </script> -->
+    <script>
+function subirArchivo() {
+    // Obtén el formulario y el archivo seleccionado
+    var formData = new FormData(document.getElementById('formFiles'));
+
+    // Crea una instancia de XMLHttpRequest
+    var xhr = new XMLHttpRequest();
+
+    // Configura la solicitud POST al script PHP que procesará el archivo
+    xhr.open('POST', '../controllers/importar.php', true);
+
+    // Define el evento onload que se ejecutará cuando la solicitud se complete
+    xhr.onload = function() {
+        if (xhr.status === 200) {
+            // La solicitud fue exitosa, muestra la respuesta del servidor (mensaje de éxito o error)
+            alert(xhr.responseText);
+        } else {
+            // Hubo un error en la solicitud
+            alert('Error al subir el archivo.');
+        }
+    };
+
+    // Envía la solicitud con los datos del formulario (incluyendo el archivo)
+    xhr.send(formData);
+}
+</script>
 </body>
 
 </html>
@@ -217,4 +260,4 @@
 //el false a true 
 //$dompdf ->stream("archivo_.pdf",array("Attachment"=> false));
 //echo $dompdf->output();
-?> 
+?>
